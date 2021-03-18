@@ -11,17 +11,17 @@ refs.btnStart.addEventListener('click', onClickStart);
 refs.btnStop.addEventListener('click', onClickStop);
 
 function onClickStart() {
-  if (refs.btnStart.disablet) return;
+  if (refs.btnStart.disabled) return;
   timerId = setInterval(() => {
     const arrId = randomIntegerFromInterval(0, colors.length - 1);
     refs.body.style.backgroundColor = colors[arrId];
-    refs.btnStart.disablet = true;
+    refs.btnStart.disabled = true;
   }, 1000);
 }
 
 function onClickStop() {
   clearInterval(timerId);
-  refs.btnStart.disablet = false;
+  refs.btnStart.disabled = false;
 }
 
 const randomIntegerFromInterval = (min, max) => {
