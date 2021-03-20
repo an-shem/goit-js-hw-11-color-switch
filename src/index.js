@@ -12,10 +12,10 @@ refs.btnStop.addEventListener('click', onClickStop);
 
 function onClickStart() {
   if (refs.btnStart.disabled) return;
+  refs.btnStart.disabled = true;
   timerId = setInterval(() => {
     const arrId = randomIntegerFromInterval(0, colors.length - 1);
     refs.body.style.backgroundColor = colors[arrId];
-    refs.btnStart.disabled = true;
   }, 1000);
 }
 
